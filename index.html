@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCA Department | National College, Tiruchirappalli</title>
+  <meta name="description" content="Bachelor of Computer Applications (BCA) Department at National College, Tiruchirappalli. Shaping future technology leaders with excellence in education." />
+  <meta name="author" content="National College, Trichy" />
+  <meta name="keywords" content="BCA, National College, Tiruchirappalli, Trichy, Computer Applications, BCA Course, BCA Admission" />
+  
+  <meta property="og:title" content="BCA Department | National College, Tiruchirappalli" />
+  <meta property="og:description" content="Join the prestigious BCA program at National College, Trichy. 3-year undergraduate program in Computer Applications." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header id="navbar" class="navbar">
+    <nav class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="logo-section">
+          <div class="logo-circle">
+            <span>NC</span>
+          </div>
+          <div class="logo-text">
+            <h1>National College</h1>
+            <p>Tiruchirappalli</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button class="nav-link active" data-page="about">About Department</button>
+          <button class="nav-link" data-page="gallery">Gallery</button>
+          <button class="nav-link" data-page="faculty">Faculty Details</button>
+        </div>
+
+        <!-- Register Button & Mobile Menu -->
+        <div class="nav-actions">
+          <button class="btn-primary" id="registerBtn">Register</button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-nav-link active" data-page="about">About Department</button>
+        <button class="mobile-nav-link" data-page="gallery">Gallery</button>
+        <button class="mobile-nav-link" data-page="faculty">Faculty Details</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="mainContent">
+    <!-- About Page (Default) -->
+    <div id="aboutPage" class="page active">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-bg-pattern">
+          <div class="hero-blob blob-1"></div>
+          <div class="hero-blob blob-2"></div>
+        </div>
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+            </svg>
+            <span>Bachelor of Computer Applications</span>
+          </div>
+
+          <h1 class="hero-title">
+            Shape Your Future in <span class="text-gradient">Technology</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Join the prestigious BCA Department at National College, Tiruchirappalli. 
+            Where innovation meets excellence, and students transform into technology leaders.
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat card-glass">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <h3>3 Years</h3>
+              <p>Program Duration</p>
+            </div>
+            
+            <div class="hero-stat card-glass">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+              <h3>6 Semesters</h3>
+              <p>Comprehensive Curriculum</p>
+            </div>
+            
+            <div class="hero-stat card-glass">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>240+</h3>
+              <p>Active Students</p>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- Course Overview Section -->
+      <section class="course-section">
+        <div class="section-container">
+          <div class="section-header">
+            <h2>Course <span class="text-gradient">Overview</span></h2>
+            <p>A comprehensive three-year undergraduate program designed to build strong foundations in computer applications.</p>
+          </div>
+
+          <div class="course-grid">
+            <div class="course-card card-glass">
+              <div class="course-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              <p class="course-label">Duration</p>
+              <span class="counter-value" data-end="3" data-suffix=" Years">0</span>
+              <p class="course-desc">Full-time program</p>
+            </div>
+
+            <div class="course-card card-glass">
+              <div class="course-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <p class="course-label">Semesters</p>
+              <span class="counter-value" data-end="6" data-suffix="">0</span>
+              <p class="course-desc">Structured learning</p>
+            </div>
+
+            <div class="course-card card-glass">
+              <div class="course-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <p class="course-label">Annual Fees</p>
+              <span class="counter-value" data-end="25000" data-prefix="₹">0</span>
+              <p class="course-desc">Affordable education</p>
+            </div>
+
+            <div class="course-card card-glass">
+              <div class="course-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                </svg>
+              </div>
+              <p class="course-label">Total Fees</p>
+              <span class="counter-value" data-end="150000" data-prefix="₹">0</span>
+              <p class="course-desc">Complete program</p>
+            </div>
+          </div>
+
+          <!-- Student Strength Banner -->
+          <div class="student-banner">
+            <p class="banner-label">Currently Enrolled</p>
+            <div class="banner-value">
+              <span>240+</span>
+              <span class="banner-suffix">Students</span>
+            </div>
+            <p class="banner-desc">Join our growing community of aspiring tech professionals</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section class="vision-section">
+        <div class="section-container">
+          <div class="section-header">
+            <h2>Vision & <span class="text-gradient">Mission</span></h2>
+            <p>Guiding principles that drive our commitment to excellence in computer science education.</p>
+          </div>
+
+          <div class="vision-grid">
+            <!-- Vision Card -->
+            <div class="vision-card card-elevated">
+              <div class="card-blob"></div>
+              <div class="vision-content">
+                <div class="vision-header">
+                  <div class="vision-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </div>
+                  <h3>Our Vision</h3>
+                </div>
+                <p>To emerge as a center of excellence in computer applications education, nurturing 
+                technologically competent professionals who contribute meaningfully to society and 
+                drive innovation in the digital era. We envision creating leaders who shape the 
+                future of technology.</p>
+              </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="mission-card card-elevated">
+              <div class="card-blob"></div>
+              <div class="vision-content">
+                <div class="vision-header">
+                  <div class="vision-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <h3>Our Mission</h3>
+                </div>
+                <ul class="mission-list">
+                  <li>
+                    <div class="mission-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                    <span>Foster innovative thinking and problem-solving skills</span>
+                  </li>
+                  <li>
+                    <div class="mission-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"></path>
+                        <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"></path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                      </svg>
+                    </div>
+                    <span>Prepare students for industry challenges</span>
+                  </li>
+                  <li>
+                    <div class="mission-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <span>Build collaborative learning environment</span>
+                  </li>
+                  <li>
+                    <div class="mission-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                      </svg>
+                    </div>
+                    <span>Achieve academic excellence through quality education</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects-section">
+        <div class="section-container">
+          <div class="section-header">
+            <h2>Student <span class="text-gradient">Projects</span></h2>
+            <p>Explore innovative projects developed by our talented students across various domains of computer applications.</p>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3>Web Applications</h3>
+              <p>Full-stack web development projects using modern frameworks like React, Node.js, and cloud technologies.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54"></path>
+                  <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54"></path>
+                </svg>
+              </div>
+              <h3>AI & Machine Learning</h3>
+              <p>Innovative projects in artificial intelligence, including chatbots, image recognition, and predictive analytics.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>NLP</span>
+              </div>
+            </div>
+
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3>Mobile Applications</h3>
+              <p>Cross-platform mobile app development for Android and iOS using Flutter and React Native.</p>
+              <div class="project-tags">
+                <span>Flutter</span>
+                <span>React Native</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3>Data Analytics</h3>
+              <p>Business intelligence solutions and data visualization dashboards for real-world datasets.</p>
+              <div class="project-tags">
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Tableau</span>
+              </div>
+            </div>
+
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3>Cybersecurity</h3>
+              <p>Security-focused projects including vulnerability assessment tools and encryption systems.</p>
+              <div class="project-tags">
+                <span>Security</span>
+                <span>Encryption</span>
+                <span>Ethical Hacking</span>
+              </div>
+            </div>
+
+            <div class="project-item project-card">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <h3>Cloud Solutions</h3>
+              <p>Scalable cloud-based applications leveraging AWS, Azure, and Google Cloud platforms.</p>
+              <div class="project-tags">
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Syllabus Section -->
+      <section class="syllabus-section">
+        <div class="section-container syllabus-container">
+          <div class="section-header">
+            <h2>Course <span class="text-gradient">Syllabus</span></h2>
+            <p>A comprehensive curriculum designed to equip students with cutting-edge skills in computer applications.</p>
+          </div>
+
+          <div class="syllabus-list">
+            <!-- Semester 1 -->
+            <div class="syllabus-item card-glass" data-semester="1">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">1</div>
+                  <div class="semester-text">
+                    <h3>Semester 1</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Programming in C</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Digital Computer Fundamentals</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Mathematical Foundations</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Communication Skills</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Environmental Studies</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: C Programming</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+
+            <!-- Semester 2 -->
+            <div class="syllabus-item card-glass" data-semester="2">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">2</div>
+                  <div class="semester-text">
+                    <h3>Semester 2</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Data Structures</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Object Oriented Programming with C++</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Operating Systems</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Discrete Mathematics</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: Data Structures</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: C++ Programming</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+
+            <!-- Semester 3 -->
+            <div class="syllabus-item card-glass" data-semester="3">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">3</div>
+                  <div class="semester-text">
+                    <h3>Semester 3</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Database Management Systems</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Java Programming</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Computer Networks</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Software Engineering</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: DBMS</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: Java Programming</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+
+            <!-- Semester 4 -->
+            <div class="syllabus-item card-glass" data-semester="4">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">4</div>
+                  <div class="semester-text">
+                    <h3>Semester 4</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Web Technologies</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Python Programming</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Computer Graphics</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>E-Commerce</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: Web Development</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: Python Programming</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+
+            <!-- Semester 5 -->
+            <div class="syllabus-item card-glass" data-semester="5">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">5</div>
+                  <div class="semester-text">
+                    <h3>Semester 5</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Mobile Application Development</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Cloud Computing</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Machine Learning Basics</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Information Security</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Project Work - Phase 1</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Lab: Mobile Apps</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+
+            <!-- Semester 6 -->
+            <div class="syllabus-item card-glass" data-semester="6">
+              <button class="accordion-trigger">
+                <div class="semester-info">
+                  <div class="semester-num">6</div>
+                  <div class="semester-text">
+                    <h3>Semester 6</h3>
+                    <p>6 Subjects</p>
+                  </div>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="subjects-grid">
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Artificial Intelligence</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Big Data Analytics</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Internet of Things</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Professional Ethics</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Project Work - Phase 2</span></div>
+                  <div class="subject"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span>Industrial Training</span></div>
+                </div>
+                <button class="download-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download Syllabus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="galleryPage" class="page">
+      <section class="gallery-section">
+        <div class="section-container">
+          <div class="gallery-header">
+            <h1>Campus <span class="text-gradient">Gallery</span></h1>
+            <p>Take a visual tour of our modern facilities, vibrant campus life, and academic environment.</p>
+          </div>
+
+          <!-- Main Carousel -->
+          <div class="gallery-container">
+            <div class="gallery-viewport">
+              <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-slide">
+                  <img src="image1.jpeg" alt="Computer Laboratory">
+                  <div class="slide-overlay">
+                    <h3>Computer Laboratory</h3>
+                    <p>State-of-the-art computing facilities</p>
+                  </div>
+                </div>
+                <div class="gallery-slide">
+                  <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200&h=800&fit=crop" alt="Collaborative Learning">
+                  <div class="slide-overlay">
+                    <h3>Collaborative Learning</h3>
+                    <p>Students working together on projects</p>
+                  </div>
+                </div>
+                <div class="gallery-slide">
+                  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=800&fit=crop" alt="Campus Life">
+                  <div class="slide-overlay">
+                    <h3>Campus Life</h3>
+                    <p>Vibrant college campus environment</p>
+                  </div>
+                </div>
+                <div class="gallery-slide">
+                  <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop" alt="Classroom Sessions">
+                  <div class="slide-overlay">
+                    <h3>Classroom Sessions</h3>
+                    <p>Interactive learning experiences</p>
+                  </div>
+                </div>
+                <div class="gallery-slide">
+                  <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=1200&h=800&fit=crop" alt="Library Resources">
+                  <div class="slide-overlay">
+                    <h3>Library Resources</h3>
+                    <p>Extensive academic resources</p>
+                  </div>
+                </div>
+                <div class="gallery-slide">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop" alt="Group Discussions">
+                  <div class="slide-overlay">
+                    <h3>Group Discussions</h3>
+                    <p>Peer learning and collaboration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="gallery-nav prev" id="prevSlide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <button class="gallery-nav next" id="nextSlide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div class="gallery-dots" id="galleryDots"></div>
+          </div>
+
+          
+                    <!-- Celebrations & Achievements -->
+          <div class="celebrations-section">
+            <h2 class="celebrations-title">Celebrations & Achievements</h2>
+            <div class="celebrations-grid">
+              <div class="celebration-card">
+                <img src="image3.jpeg" alt="Annual Fest">
+                <div class="celebration-card-content">
+                  <h3>Annual Fest</h3>
+                  <p>Celebrating student talents</p>
+                </div>
+              </div>
+              <div class="celebration-card">
+                <img src="image1.jpeg" alt="Hackathon">
+                <div class="celebration-card-content">
+                  <h3>Hackathon 2024</h3>
+                  <p>Innovation and coding</p>
+                </div>
+              </div>
+              <div class="celebration-card">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop" alt="Award Ceremony">
+                <div class="celebration-card-content">
+                  <h3>Award Ceremony</h3>
+                  <p>Outstanding achievements</p>
+                </div>
+              </div>
+              <div class="celebration-card">
+                <img src="image5.jpeg" alt="Tech Conference">
+                <div class="celebration-card-content">
+                  <h3>Tech Conference</h3>
+                  <p>Industry insights</p>
+                </div>
+              </div>
+              <div class="celebration-card">
+                <img src="image2.jpeg" alt="Graduation">
+                <div class="celebration-card-content">
+                  <h3>Graduation Day</h3>
+                  <p>Success stories</p>
+                </div>
+              </div>
+              <div class="celebration-card">
+                <img src="image4.jpeg" alt="Sports Day">
+                <div class="celebration-card-content">
+                  <h3>Sports Day</h3>
+                  <p>Teamwork and sportsmanship</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Faculty Page -->
+    <div id="facultyPage" class="page">
+      <section class="faculty-section">
+        <div class="section-container">
+          <div class="faculty-header">
+            <h1>Our <span class="text-gradient">Faculty</span></h1>
+            <p>Meet our distinguished faculty members who bring together academic excellence and industry expertise.</p>
+          </div>
+
+          <div class="faculty-grid" id="facultyGrid">
+            <!-- Faculty cards will be generated by JS -->
+          </div>
+
+          <!-- Department Stats -->
+          <div class="faculty-stats">
+            <div class="stat-card card-glass">
+              <p class="stat-value text-gradient">12+</p>
+              <p class="stat-label">Faculty Members</p>
+            </div>
+            <div class="stat-card card-glass">
+              <p class="stat-value text-gradient">8</p>
+              <p class="stat-label">Ph.D. Holders</p>
+            </div>
+            <div class="stat-card card-glass">
+              <p class="stat-value text-gradient">50+</p>
+              <p class="stat-label">Years of Experience</p>
+            </div>
+            <div class="stat-card card-glass">
+              <p class="stat-value text-gradient">100+</p>
+              <p class="stat-label">Research Papers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- College Info -->
+        <div class="footer-info">
+          <div class="footer-logo">
+            <div class="logo-circle">
+              <span>NC</span>
+            </div>
+            <div>
+              <h3>National College</h3>
+              <p>Tiruchirappalli</p>
+            </div>
+          </div>
+          <p class="footer-desc">A premier institution dedicated to academic excellence and holistic development. Shaping future leaders in technology and innovation since establishment.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"></line></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Placements</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Dindigul Main Road,<br>Tiruchirappalli - 620001,<br>Tamil Nadu, India</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 431 270 0661</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>bca@nct.ac.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2025 National College, Tiruchirappalli. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Register Modal -->
+  <div class="modal-overlay hidden" id="registerModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content card-elevated">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36" height="36">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </div>
+      
+      <h2>Registration Opening Soon</h2>
+      <p>We're preparing something exciting! Registration for the upcoming academic year will open shortly.</p>
+      
+      <div class="modal-date">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Expected: July 2025</span>
+      </div>
+      
+      <div class="modal-buttons">
+        <button class="btn-primary" id="modalGotIt">Got it, Thanks!</button>
+        <button class="btn-outline" id="modalNotify">Notify Me</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
