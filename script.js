@@ -40,12 +40,12 @@ const galleryImages = [
 ];
 
 const facultyData = [
-  { name: 'Dr. K. Ramesh', designation: 'Head of Department', qualification: 'Ph.D. in Computer Science', specialization: 'Artificial Intelligence', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Dr. S. Lakshmi', designation: 'Associate Professor', qualification: 'Ph.D. in Data Science', specialization: 'Machine Learning', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Prof. M. Venkatesh', designation: 'Assistant Professor', qualification: 'M.Tech, M.Phil.', specialization: 'Web Technologies', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Dr. P. Anitha', designation: 'Associate Professor', qualification: 'Ph.D. in Cloud Computing', specialization: 'Cloud Architecture', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Prof. R. Suresh', designation: 'Assistant Professor', qualification: 'M.C.A., M.Phil.', specialization: 'Database Systems', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Dr. T. Priya', designation: 'Assistant Professor', qualification: 'Ph.D. in Cybersecurity', specialization: 'Information Security', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face' }
+  { name: 'Dr. M. ANUSHA', designation: 'Head of Department', qualification: 'M.Sc., M.Phil.,M.Tech., Ph.D.,', specialization: 'Artificial Intelligence', image: 'https://nct.ac.in/assets/images/bca/cv/10.png', contact: '+91 8220376755' },
+  { name: 'Dr. G. SRINAGANYA', designation: 'Associate Professor', qualification: 'MCA., M.Phil., Ph.D.,', specialization: 'Machine Learning', image: 'https://nct.ac.in/assets/images/bca/cv/11.png', contact: '+91 9791409349' },
+  { name: 'R. KEVIN JOSHUA', designation: 'Assistant Professor', qualification: 'MCA.,M.Phil.,', specialization: 'Web Technologies', image: 'https://nct.ac.in/assets/images/bca/cv/12.png', contact: '+91 8667714758' },
+  { name: 'S. REVATHI', designation: 'Associate Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Cloud Architecture', image: 'https://nct.ac.in/assets/images/bca/cv/13.png', contact: '+91 8667244693' },
+  { name: 'B. NAGAJOTHI', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Database Systems', image: 'https://nct.ac.in/assets/images/bca/cv/14.png', contact: '+91 9342029149' },
+  { name: 'A. AASMI SABANA', designation: 'Assistant Professor', qualification: 'M.Sc.,', specialization: 'Information Security', image: 'https://nct.ac.in/assets/images/bca/cv/18.png', contact: '+91 7604874130' }
 ];
 
 // ============================================
@@ -263,12 +263,11 @@ function initFacultyGrid() {
           <span>${faculty.specialization}</span>
         </div>
       </div>
-      <button class="faculty-contact">
+      <button class="faculty-contact" ${faculty.contact ? `onclick="window.location.href='tel:${faculty.contact}'"` : ''}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
-        Contact
+        ${faculty.contact || 'Contact'}
       </button>
     `;
     facultyGrid.appendChild(card);
@@ -280,10 +279,6 @@ function initFacultyGrid() {
 // ============================================
 function initAccordions() {
   const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-  
-  // Open first accordion by default
-  const firstItem = document.querySelector('.syllabus-item');
-  if (firstItem) firstItem.classList.add('open');
 
   accordionTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
