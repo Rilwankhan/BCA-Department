@@ -40,12 +40,12 @@ const galleryImages = [
 ];
 
 const facultyData = [
-  { name: 'Dr. M. ANUSHA', designation: 'Head of Department', qualification: 'M.Sc., M.Phil.,M.Tech., Ph.D.,', specialization: 'Artificial Intelligence', image: 'https://nct.ac.in/assets/images/bca/cv/10.png', contact: '+91 8220376755' },
-  { name: 'Dr. G. SRINAGANYA', designation: 'Associate Professor', qualification: 'MCA., M.Phil., Ph.D.,', specialization: 'Machine Learning', image: 'https://nct.ac.in/assets/images/bca/cv/11.png', contact: '+91 9791409349' },
-  { name: 'R. KEVIN JOSHUA', designation: 'Assistant Professor', qualification: 'MCA.,M.Phil.,', specialization: 'Web Technologies', image: 'https://nct.ac.in/assets/images/bca/cv/12.png', contact: '+91 8667714758' },
-  { name: 'S. REVATHI', designation: 'Associate Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Cloud Architecture', image: 'https://nct.ac.in/assets/images/bca/cv/13.png', contact: '+91 8667244693' },
-  { name: 'B. NAGAJOTHI', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Database Systems', image: 'https://nct.ac.in/assets/images/bca/cv/14.png', contact: '+91 9342029149' },
-  { name: 'A. AASMI SABANA', designation: 'Assistant Professor', qualification: 'M.Sc.,', specialization: 'Information Security', image: 'https://nct.ac.in/assets/images/bca/cv/18.png', contact: '+91 7604874130' }
+  { name: 'Dr. M. ANUSHA', designation: 'Head of Department', qualification: 'M.Sc., M.Phil.,M.Tech., Ph.D.,', specialization: 'Artificial Intelligence', image: 'https://nct.ac.in/assets/images/bca/cv/10.png', contact: '+91 8220376755', profile: 'http://nct.ac.in/assets/images/bca/cv/1.%20Anusha.pdf', achievements: 'https://scholar.google.com/citations?user=XEMWO8EAAAAJ&hl=en' },
+  { name: 'Dr. G. SRINAGANYA', designation: 'Associate Professor', qualification: 'MCA., M.Phil., Ph.D.,', specialization: 'Machine Learning', image: 'https://nct.ac.in/assets/images/bca/cv/11.png', contact: '+91 9791409349', profile: 'https://www.nct.ac.in/assets/images/bca/cv/2.%20Dr%20G%20Srinaganya.pdf', achievements: 'https://scholar.google.com/citations?pli=1&user=DeRH35QAAAAJ' },
+  { name: 'R. KEVIN JOSHUA', designation: 'Assistant Professor', qualification: 'MCA.,M.Phil.,', specialization: 'Web Technologies', image: 'https://nct.ac.in/assets/images/bca/cv/12.png', contact: '+91 8667714758', profile: 'https://www.nct.ac.in/assets/images/bca/cv/3.%20kevin%202024.pdf', achievements: '' },
+  { name: 'S. REVATHI', designation: 'Associate Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Cloud Architecture', image: 'https://nct.ac.in/assets/images/bca/cv/13.png', contact: '+91 8667244693', profile: 'https://www.nct.ac.in/assets/images/bca/cv/4.%20S.Revathi-Biodata.pdf', achievements: '' },
+  { name: 'B. NAGAJOTHI', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil,', specialization: 'Database Systems', image: 'https://nct.ac.in/assets/images/bca/cv/14.png', contact: '+91 9342029149', profile: 'https://www.nct.ac.in/assets/images/bca/cv/5.%20Nagajothi-Staff%20Biodata.pdf', achievements: '' },
+  { name: 'A. AASMI SABANA', designation: 'Assistant Professor', qualification: 'M.Sc.,', specialization: 'Information Security', image: 'https://nct.ac.in/assets/images/bca/cv/18.png', contact: '+91 7604874130', profile: 'https://www.nct.ac.in/assets/images/bca/cv/9..%20AASMI%20SABANA.pdf', achievements: '' }
 ];
 
 // ============================================
@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initGallery();
   initFacultyGrid();
+  initSyllabusApproval();
   initAccordions();
   initAnimations();
   initCounters();
@@ -96,12 +97,10 @@ function initNavigation() {
 }
 
 function navigateTo(page) {
-  // Update active states
   navLinks.forEach(link => {
     link.classList.toggle('active', link.dataset.page === page);
   });
 
-  // Animate page transition
   const currentPage = document.querySelector('.page.active');
   const nextPage = document.getElementById(`${page}Page`);
 
@@ -117,7 +116,6 @@ function navigateTo(page) {
           { opacity: 1, duration: 0.5 }
         );
         
-        // Re-initialize page-specific animations
         if (page === 'about') {
           initAboutAnimations();
         } else if (page === 'gallery') {
@@ -129,12 +127,10 @@ function navigateTo(page) {
     });
   }
 
-  // Close mobile menu
   mobileMenu.classList.remove('open');
   mobileMenuBtn.querySelector('.menu-icon').classList.remove('hidden');
   mobileMenuBtn.querySelector('.close-icon').classList.add('hidden');
 
-  // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
   
   activePage = page;
@@ -181,7 +177,6 @@ function closeModal() {
 // Gallery Carousel
 // ============================================
 function initGallery() {
-  // Create dots
   galleryImages.forEach((_, index) => {
     const dot = document.createElement('button');
     dot.className = `gallery-dot ${index === 0 ? 'active' : ''}`;
@@ -189,7 +184,6 @@ function initGallery() {
     galleryDots.appendChild(dot);
   });
 
-  // Navigation buttons
   prevSlideBtn.addEventListener('click', () => {
     goToSlide(currentSlide - 1);
   });
@@ -198,7 +192,6 @@ function initGallery() {
     goToSlide(currentSlide + 1);
   });
 
-  // Auto-play
   startSlideshow();
 }
 
@@ -212,14 +205,11 @@ function goToSlide(index) {
     ease: 'power3.out'
   });
 
-  // Update dots
   document.querySelectorAll('.gallery-dot').forEach((dot, i) => {
     dot.classList.toggle('active', i === index);
   });
 
   currentSlide = index;
-  
-  // Reset autoplay timer
   startSlideshow();
 }
 
@@ -263,6 +253,10 @@ function initFacultyGrid() {
           <span>${faculty.specialization}</span>
         </div>
       </div>
+      <div class="faculty-buttons">
+        <button class="btn-faculty-primary" data-profile="${faculty.profile}">View Profile</button>
+        <button class="btn-faculty-secondary" data-achievements="${faculty.achievements}">Achievements</button>
+      </div>
       <button class="faculty-contact" ${faculty.contact ? `onclick="window.location.href='tel:${faculty.contact}'"` : ''}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -272,6 +266,48 @@ function initFacultyGrid() {
     `;
     facultyGrid.appendChild(card);
   });
+  
+  document.querySelectorAll('.btn-faculty-primary').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.dataset.profile;
+      if (!url) alert('No Document is there');
+      else window.open(url, '_blank');
+    });
+  });
+  
+  document.querySelectorAll('.btn-faculty-secondary').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.dataset.achievements;
+      if (!url) alert('No Document is there');
+      else window.open(url, '_blank');
+    });
+  });
+}
+
+function initSyllabusApproval() {
+  const downloadBtns = document.querySelectorAll('.download-btn-approval');
+
+  downloadBtns.forEach((btn, index) => {
+    const versionKey = `version${index + 1}`;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      downloadFile(`Syllabus_${index + 1}`, versionKey);
+    });
+  });
+}
+
+function downloadFile(name, versionKey) {
+  const downloadUrl = syllabusVersionUrls[versionKey];
+  if (!downloadUrl) {
+    console.error('URL not configured for ' + versionKey);
+    return;
+  }
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.download = `${name}.pdf`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 // ============================================
@@ -286,12 +322,10 @@ function initAccordions() {
       const item = trigger.closest('.syllabus-item');
       const isOpen = item.classList.contains('open');
       
-      // Close all
       document.querySelectorAll('.syllabus-item').forEach(i => {
         i.classList.remove('open');
       });
       
-      // Toggle current
       if (!isOpen) {
         item.classList.add('open');
       }
@@ -307,12 +341,32 @@ function initAccordions() {
   });
 }
 
+// Semester-wise syllabus URLs
+const semesterUrls = {
+  1: 'https://yappy-moccasin-vgweypr19k.edgeone.app/Break%20point%20Research%20paper%20.pdf',
+  2: 'https://drive.google.com/uc?export=download&id=YOUR_SEMESTER_2_ID',
+  3: 'https://drive.google.com/uc?export=download&id=YOUR_SEMESTER_3_ID',
+  4: 'https://drive.google.com/uc?export=download&id=YOUR_SEMESTER_4_ID',
+  5: 'https://drive.google.com/uc?export=download&id=YOUR_SEMESTER_5_ID',
+  6: 'https://drive.google.com/uc?export=download&id=YOUR_SEMESTER_6_ID'
+};
+
+// Syllabus version URLs
+const syllabusVersionUrls = {
+  'version1': 'https://drive.google.com/uc?export=download&id=YOUR_VERSION_1_ID',
+  'version2': 'https://drive.google.com/uc?export=download&id=YOUR_VERSION_2_ID',
+  'version3': 'https://drive.google.com/uc?export=download&id=YOUR_VERSION_3_ID'
+};
+
 function downloadSyllabus(semester) {
-  const downloadUrl = 'https://drive.google.com/uc?export=download&id=1NDCyp8V4syaEPSyOmQ0qbcXpxgNqGcOp';
-  
+  const downloadUrl = semesterUrls[parseInt(semester)];
+  if (!downloadUrl) {
+    console.error('URL not configured for semester ' + semester);
+    return;
+  }
   const link = document.createElement('a');
   link.href = downloadUrl;
-  link.download = 'Break point Research paper.pdf';
+  link.download = `Semester_${semester}_Syllabus.pdf`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -350,7 +404,7 @@ function animateCounter(element) {
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const easeProgress = 1 - Math.pow(1 - progress, 3); // Ease out cubic
+    const easeProgress = 1 - Math.pow(1 - progress, 3);
     const current = Math.floor(end * easeProgress);
     
     element.textContent = prefix + current.toLocaleString() + suffix;
@@ -369,12 +423,10 @@ function animateCounter(element) {
 // GSAP Animations
 // ============================================
 function initAnimations() {
-  // Initial page load animations
   initAboutAnimations();
 }
 
 function initAboutAnimations() {
-  // Hero animations
   gsap.fromTo('.hero-title', 
     { opacity: 0, y: 60 },
     { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
@@ -390,7 +442,6 @@ function initAboutAnimations() {
     { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, delay: 0.5, ease: 'power3.out' }
   );
 
-  // Course cards
   gsap.fromTo('.course-card',
     { opacity: 0, y: 50 },
     {
@@ -407,7 +458,6 @@ function initAboutAnimations() {
     }
   );
 
-  // Vision & Mission
   gsap.fromTo('.vision-card',
     { opacity: 0, x: -60 },
     {
@@ -436,7 +486,6 @@ function initAboutAnimations() {
     }
   );
 
-  // Projects
   gsap.fromTo('.project-item',
     { opacity: 0, y: 50, scale: 0.95 },
     {
@@ -453,7 +502,21 @@ function initAboutAnimations() {
     }
   );
 
-  // Syllabus
+  gsap.fromTo('.approval-card',
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.syllabus-approval-section',
+        start: 'top 75%'
+      }
+    }
+  );
+
   gsap.fromTo('.syllabus-item',
     { opacity: 0, x: -30 },
     {
